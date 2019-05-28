@@ -16,9 +16,11 @@ titleElement.value = note.title
 bodyElement.value = note.body
 dateElement.textContent = generateLastEdited(note.updatedAt)
 
+
 // Save title on the fly
 titleElement.addEventListener('input', function (e){
     note.title = e.target.value
+    note.updatedAt = moment().valueOf()
     dateElement.textContent = generateLastEdited(note.updatedAt)
     saveNotes(notes)
 })
@@ -26,6 +28,7 @@ titleElement.addEventListener('input', function (e){
 // save body on the fly
 bodyElement.addEventListener('input', function (e) {
     note.body = e.target.value
+    note.updatedAt = moment().valueOf()
     dateElement.textContent = generateLastEdited(note.updatedAt)
     saveNotes(notes)
 })
