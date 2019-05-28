@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+       <h1> some other text</h1>
+       <h2>Take notes and never forget</h2>
+       <input type ='text' id="search-text" placeholder = "write todos here">
+       <select id="filter-by">
+           <option value="byEdited">Sort by last edited</option>
+           <option value="byCreated">Sort by recently created</option>
+           <option value="alphabetical">Sort alphabetically</option>
+       </select>
+       <div id="notes"></div>
+       <button id='create-note'>create note</button>
+       <form id="name-form">
+           <input type="text" placeholder="First name" name="firstName">
+           <button>Submit</button>
+       </form>
+       <script src="uuidv4.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+       <script src="notes-functions.js"></script>
+       <script src= "notes-app.js">    
+       </script>
+    </body>
+</html>
